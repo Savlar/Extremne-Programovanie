@@ -1,158 +1,173 @@
 import unittest
-from cv3 import convert_to_int
+from cv3 import RomanCalculator
 
 
 class MyTestCase(unittest.TestCase):
 
+    def setUp(self) -> None:
+        self.c = RomanCalculator()
+
     def test_1(self):
-        self.assertEqual(1, convert_to_int('I'))
+        self.assertEqual(1, self.c.convert_to_int('I'))
 
     def test_2(self):
-        self.assertEqual(2, convert_to_int('II'))
+        self.assertEqual(2, self.c.convert_to_int('II'))
 
     def test_3(self):
-        self.assertEqual(3, convert_to_int('III'))
+        self.assertEqual(3, self.c.convert_to_int('III'))
 
     def test_4(self):
-        self.assertEqual(4, convert_to_int('IV'))
+        self.assertEqual(4, self.c.convert_to_int('IV'))
 
     def test_5(self):
-        self.assertEqual(5, convert_to_int('V'))
+        self.assertEqual(5, self.c.convert_to_int('V'))
 
     def test_6(self):
-        self.assertEqual(6, convert_to_int('VI'))
+        self.assertEqual(6, self.c.convert_to_int('VI'))
 
     def test_7(self):
-        self.assertEqual(8, convert_to_int('VIII'))
+        self.assertEqual(8, self.c.convert_to_int('VIII'))
 
     def test_8(self):
-        self.assertEqual(9, convert_to_int('IX'))
+        self.assertEqual(9, self.c.convert_to_int('IX'))
 
     def test_9(self):
-        self.assertEqual(-9999, convert_to_int('KVI'))
+        self.assertEqual(-9999, self.c.convert_to_int('KVI'))
 
     def test_10(self):
-        self.assertEqual(-9999, convert_to_int('-*/'))
+        self.assertEqual(-9999, self.c.convert_to_int('-*/'))
 
     def test_11(self):
-        self.assertNotEqual(1, convert_to_int('IIIIV'))
+        self.assertNotEqual(1, self.c.convert_to_int('IIIIV'))
 
     def test_12(self):
-        self.assertNotEqual(5, convert_to_int('IIIII'))
+        self.assertNotEqual(5, self.c.convert_to_int('IIIII'))
 
     def test_13(self):
-        self.assertEqual(-9999, convert_to_int(''))
+        self.assertEqual(-9999, self.c.convert_to_int(''))
 
     def test_14(self):
-        self.assertNotEqual(9, convert_to_int('VIIII'))
+        self.assertNotEqual(9, self.c.convert_to_int('VIIII'))
 
     def test_15(self):
-        self.assertNotEqual(10, convert_to_int('VIIIII'))
+        self.assertNotEqual(10, self.c.convert_to_int('VIIIII'))
 
     def test_16(self):
-        self.assertEqual(105, convert_to_int('CV'))
+        self.assertEqual(105, self.c.convert_to_int('CV'))
 
     def test_17(self):
-        self.assertEqual(-9999, convert_to_int(5))
+        self.assertEqual(-9999, self.c.convert_to_int(5))
 
     def test_18(self):
-        self.assertEqual(-9999, convert_to_int('IVI'))
+        self.assertEqual(1351, self.c.convert_to_int('MCCCLI'))
 
     def test_19(self):
-        self.assertEqual(-9999, convert_to_int('VIV'))
+        self.assertEqual(1323, self.c.convert_to_int('MCCCXXIII'))
 
     def test_20(self):
-        self.assertEqual(-9999, convert_to_int('VIVI'))
+        self.assertEqual(3988, self.c.convert_to_int('MMMCMLXXXVIII'))
 
     def test_21(self):
-        self.assertEqual(-9999, convert_to_int('VIIIV'))
+        self.assertEqual(2788, self.c.convert_to_int('MMDCCLXXXVIII'))
 
     def test_22(self):
-        self.assertEqual(-9999, convert_to_int('VIXIV'))
+        self.assertEqual(2798, self.c.convert_to_int('MMDCCXCVIII'))
 
     def test_23(self):
-        self.assertEqual(-9999, convert_to_int('XIVIX'))
+        self.assertEqual(3178, self.c.convert_to_int('MMMCLXXVIII'))
 
     def test_24(self):
-        self.assertEqual(2594, convert_to_int('MMDXCIV'))
+        self.assertEqual(2594, self.c.convert_to_int('MMDXCIV'))
 
     def test_25(self):
-        self.assertEqual(-9999, convert_to_int('MMMDCXLIX'))
+        self.assertEqual(3649, self.c.convert_to_int('MMMDCXLIX'))
 
     def test_26(self):
-        self.assertEqual(None, None)
+        self.assertEqual(3, self.c.convert_to_int('iii'))
 
     def test_27(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('IXX'))
 
     def test_28(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('IVIVIV'))
 
     def test_29(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('IIX'))
 
     def test_30(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('IXIXIX'))
 
     def test_31(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('XCX'))
 
     def test_32(self):
-        self.assertEqual(None, None)
+        self.assertEqual(89, self.c.convert_to_int('LXXXIX'))
 
     def test_33(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int(''))
 
     def test_34(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('     '))
 
     def test_35(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('MCMM'))
 
     def test_36(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('XCD'))
 
     def test_37(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('XXMM'))
 
     def test_38(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('MCCCMI'))
 
     def test_39(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('LC'))
 
     def test_40(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('DM'))
 
     def test_41(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('VL'))
 
     def test_42(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('IVI'))
 
     def test_43(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('LXL'))
 
     def test_44(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('XCX'))
 
     def test_45(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('IIV'))
 
     def test_46(self):
-        self.assertEqual(None, None)
+        self.assertEqual(-9999, self.c.convert_to_int('VIV'))
 
     def test_47(self):
-        self.assertEqual(None, None)
+        self.assertEqual('XX', self.c.calculate(' XI   + I X '))
 
     def test_48(self):
-        self.assertEqual(None, None)
+        self.assertEqual('Zly vstup', self.c.calculate(' MD '))
 
     def test_49(self):
-        self.assertEqual(None, None)
+        self.assertEqual('V', self.c.calculate('XXV/V'))
 
     def test_50(self):
-        self.assertEqual(None, None)
+        self.assertEqual('MCCXXII', self.c.calculate('MMCDXLIV-MCCXXII'))
+
+    def test_51(self):
+        self.assertEqual('Zly vstup', self.c.calculate(' MMMM + I'))
+
+    def test_52(self):
+        self.assertEqual('Zly vstup', self.c.calculate('MM @ I'))
+
+    def test_53(self):
+        self.assertEqual('Cislo mimo', self.c.calculate('MCDXLIV / MCDXLV'))
+
+    def test_54(self):
+        self.assertEqual('Cislo mimo', self.c.calculate('MMM + M'))
 
 
 if __name__ == '__main__':
