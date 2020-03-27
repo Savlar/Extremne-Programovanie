@@ -64,7 +64,7 @@ class RomanCalculator:
             return 'Zly vstup'
         num1 = self.convert_to_int(numbers[0])
         num2 = self.convert_to_int(numbers[1])
-        if (num1 or num2) == -9999:
+        if -9999 in [num1, num2]:
             return 'Zly vstup'
         result = int(eval(str(num1) + expression[len(numbers[0])] + str(num2)))
         if 1 <= result <= 3999:
