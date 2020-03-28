@@ -55,7 +55,7 @@ class RomanCalculator:
 
     def convert_to_roman(self, to_convert: str) -> str:
         return ''.join([self.to_roman_values[int(to_convert[-i] + '0' * (i - 1))]
-                        for i in range(1, len(to_convert) + 1)])[::-1]
+                        for i in reversed(range(1, len(to_convert) + 1))])
 
     def calculate(self, expression: str) -> str:
         expression = expression.replace(' ', '')

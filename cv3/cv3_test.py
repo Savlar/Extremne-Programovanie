@@ -169,6 +169,11 @@ class MyTestCase(unittest.TestCase):
     def test_54(self):
         self.assertEqual('Cislo mimo', self.c.calculate('MMM + M'))
 
+    def test_55(self):
+        for i in range(1, 4000):
+            roman: str = self.c.convert_to_roman(str(i))
+            self.assertEqual(i, self.c.convert_to_int(roman), "Wrong convert from arabic to roman")
+
 
 if __name__ == '__main__':
     unittest.main()
