@@ -54,15 +54,8 @@ class RomanCalculator:
         return False
 
     def convert_to_roman(self, to_convert: str) -> str:
-        arabic_number = int(to_convert)
-        roman_number = ''
-        arabic_values_descending = sorted(self.to_roman_values.keys(), reverse=True).__iter__()
-        while arabic_number > 0:
-            max_value_in_input_number = arabic_values_descending.__next__()
-            for _ in range(arabic_number // max_value_in_input_number):
-                roman_number += self.to_roman_values[max_value_in_input_number]
-                arabic_number -= max_value_in_input_number
-        return roman_number
+        return ''.join([self.to_roman_values[int(to_convert[-i] + '0' * (i - 1))]
+                        for i in reversed(range(1, len(to_convert) + 1))])
 
     def calculate(self, expression: str) -> str:
         expression = expression.replace(' ', '')

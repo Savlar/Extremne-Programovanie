@@ -175,8 +175,5 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(i, self.c.convert_to_int(roman), "Wrong convert from arabic to roman")
 
 
-
-
-
 if __name__ == '__main__':
     unittest.main()
