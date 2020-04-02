@@ -26,6 +26,8 @@ class Robot:
                     cleaned += 1
                 lst[i] = 'o'
             self.moved += 1
+        if self.moved == 0:
+            lst[start - 1] = 'o'
         return cleaned
 
     def go_up(self):
@@ -74,10 +76,7 @@ class Robot:
             self.col = col
 
         self.direction = direction
-        if self.standing_on_dirty:
-            self.board[self.row][self.col] = '1'
-        else:
-            self.board[self.row][self.col] = 'o'
+        self.board[self.row][self.col] = '1' if self.standing_on_dirty else 'o'
         self.standing_on_dirty = False
         if direction == 0:
             return self.go_up()
@@ -105,21 +104,21 @@ class Robot:
 
 if __name__ == '__main__':
     r = Robot('subor6.txt')
-    print(r)
+    # print(r)
     print('pocet znecistenych =', r.pocet_znecistenych())
     print('start(2, 3, 1) vratil', r.start(68, 1, 2))
-    print(r)
+    # print(r)
     print('pocet znecistenych =', r.pocet_znecistenych())
     r.rob('pllppllppppllppllppllp')
-    print(r)
+    # print(r)
     print("rob('ll') vratil", r.rob('ll'))
-    print(r)
+    # print(r)
     print('pocet znecistenych =', r.pocet_znecistenych())
     print("rob('pzl') vratil", r.rob('pzl'))
-    print(r)
+    # print(r)
     print('pocet znecistenych =', r.pocet_znecistenych())
     print("rob('pp') vratil", r.rob('pp'))
-    print(r)
+    # print(r)
     print('pocet znecistenych =', r.pocet_znecistenych())
 
     r = Robot('subor1.txt')
