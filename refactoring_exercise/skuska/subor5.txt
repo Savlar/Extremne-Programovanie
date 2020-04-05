@@ -1,0 +1,60 @@
+v0 E v21
+v26 F v0
+v17 v16
+v10 v11
+v15 v14
+v14 C v0
+v20 v21
+v0 A v4
+v23 E v0
+v19 D v0
+v0 A v1
+v26 v27
+v8 v9
+v30 v1
+v13 v12
+v2 v3
+v25 v26
+v22 E v0
+v28 v27
+v5 v4
+v25 F v0
+v15 v16
+v19 v18
+v13 v14
+v10 v9
+v12 v11
+v28 v29
+v5 B v0
+v0 C v11
+v7 v8
+v3 A v0
+v0 A v2
+v0 D v18
+v29 F v0
+v23 v22
+v0 E v20
+v0 C v12
+v13 C v0
+v22 v21
+v17 v18
+v0 B v7
+v0 D v17
+v3 v4
+v24 E v0
+v29 v30
+v0 D v15
+v23 v24
+v16 D v0
+v6 v7
+v0 G v30
+v6 B v0
+v24 v25
+v0 B v9
+v0 B v8
+v5 v6
+v1 v2
+v28 F v0
+v19 v20
+v0 C v10
+v0 F v27

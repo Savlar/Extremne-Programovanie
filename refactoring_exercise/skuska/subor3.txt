@@ -1,0 +1,40 @@
+v14 ba v13
+v40 sl v30
+v42 ja v41
+v31 ce v32
+v01 ma v02
+v12 cu v22
+v14 ja v24
+v43 ba v44
+v32 ce v22
+v13 hr v03
+v20 sl v30
+v12 vi v02
+v41 cu v40
+v04 sl v14
+v03 ba v04
+v34 po v33
+v23 v22
+v12 me v11
+v24 ma v23
+v31 ce v30
+v21 v20
+v13 ba v12
+v21 po v22
+v34 ce v44
+v21 hr v11
+v32 hr v33
+v33 v23
+v43 ma v42
+v11 hr v01
+v41 cu v31
+v34 uh v24
+v20 ja v10
+v01 v00
+v13 me v23
+v32 v42
+v02 vi v03
+v21 v31
+v33 po v43
+v11 sl v10
+v10 po v00

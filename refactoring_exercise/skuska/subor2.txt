@@ -1,0 +1,20 @@
+v4 v5
+v10 J v0
+v9 I v0
+v0 E v5
+v3 C v0
+v8 v9
+v4 v3
+v6 v5
+v7 G v0
+v9 v10
+v7 v8
+v3 v2
+v1 v2
+v0 D v4
+v0 B v2
+v7 v6
+v0 A v1
+v8 H v0
+v1 v10
+v0 F v6
