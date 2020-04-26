@@ -221,6 +221,35 @@ class MyTestCase(unittest.TestCase):
     def test_70(self):
         self.assertEqual(300000, self.c.convert_to_int_with_alphabet('IVXLCDMPQRS', 'SSS'))
 
+    def test_71(self):
+        self.assertEqual(3, self.c.max_number('I'))
+
+    def test_72(self):
+        self.assertEqual(8, self.c.max_number('IV'))
+
+    def test_73(self):
+        self.assertEqual(39, self.c.max_number('IVX'))
+
+    def test_74(self):
+        self.assertEqual(39, self.c.max_number('ABC'))
+
+    def test_75(self):
+        self.assertEqual(899, self.c.max_number('IVXLCD'))
+
+    def test_76(self):
+        self.assertEqual(39999, self.c.max_number('IVXLCDMQF'))
+
+    def test_77(self):
+        self.assertEqual(-9999, self.c.max_number('IVXLCI'))
+
+    def test_78(self):
+        self.assertEqual(89, self.c.max_number('LKJH'))
+
+    def test_79(self):
+        self.assertEqual(399, self.c.max_number('LKJHY'))
+
+    def test_80(self):
+        self.assertEqual(3999, self.c.max_number('LKJHYBN'))
 
 
 if __name__ == '__main__':

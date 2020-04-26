@@ -1,3 +1,4 @@
+import math
 import re
 from typing import List
 
@@ -42,13 +43,26 @@ class RomanCalculator:
         self._setAlphabet(alphabet)
         return self.convert_to_int(input_str, False)
 
-    def maxNumber(self, roman_letters) -> int:
-        alphabet = self._getAlphabet(roman_letters)
-        if len(alphabet) == 0:
+    def max_number(self, roman_letters) -> int:
+        if len(roman_letters) == 0 or len(roman_letters) != len(set(roman_letters)) \
+                or roman_letters != roman_letters.upper():
             return self.INPUT_IS_WRONG
-        return 0
+        length = len(roman_letters)
+        if length == 1:
+            return 3
+        elif length == 2:
+            return 8
+        if length % 2 == 0:
+            exp = (length // 2) - 1
+            return self.dec(exp) + 5 * (10 ** math.floor(length / 2 - 1))
+        exp = (length // 2)
+        return self.dec(exp)
 
-    def _setAlphabet(self, alphabet: list):
+    @staticmethod
+    def dec(exp: int) -> int:
+        return 3 * (10 ** exp) + (10 ** exp) - 1
+
+    def _setAlphabet(self, alphabet: list) -> None:
         self.to_arabic_values.clear()
         notRemain = len(alphabet) % 3 != 0
         for i in range(len(alphabet) // 2 + int(notRemain)):
@@ -81,7 +95,7 @@ class RomanCalculator:
             return result
         return self.INPUT_IS_WRONG
 
-    def wrong_format(self, input_str: str) -> False: 
+    def wrong_format(self, input_str: str) -> False:
         for i in input_str:
             if i not in self.to_arabic_values.keys():
                 return True
